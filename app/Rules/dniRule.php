@@ -25,7 +25,7 @@ class dniRule implements Rule
      */
     public function passes($attribute, $value)
     {
-        return preg_match('^\d{8}$[A-Z]', $value);
+        return preg_match('/^\d{8}$[A-Z]/', $value);
     }
 
     /**

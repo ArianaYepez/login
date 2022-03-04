@@ -19,8 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/create-user', 'RegisterController@createUser')->name('user.createUser');
-Route::post('/store-user', 'RegisterController@storeUser')->name('user.storeUser');
+Route::get('/create-user', 'RegisterController@create')->name('user.create');
+Route::post('/store-user', 'RegisterController@create')->name('user.create');
 
 
 

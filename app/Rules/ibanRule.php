@@ -25,7 +25,7 @@ class ibanRule implements Rule
      */
     public function passes($attribute, $value)
     {
-        return preg_match('^ES$\d{2}\s\d{4}\s\d{4}\s\d{2}\s\d{10}', $value);
+        return preg_match('/^ES$\d{2}\s\d{4}\s\d{4}\s\d{2}\s\d{10}/', $value);
     }
 
     /**

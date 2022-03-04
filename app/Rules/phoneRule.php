@@ -25,7 +25,7 @@ class phoneRule implements Rule
      */
     public function passes($attribute, $value)
     {
-        return preg_match('[+]|\d{9,}', $value);
+        return preg_match('/[+]|\d{9,}/', $value);
     }
 
     /**
