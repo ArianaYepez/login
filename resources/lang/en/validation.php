@@ -117,6 +117,10 @@ return [
     'uploaded' => 'The :attribute failed to upload.',
     'url' => 'The :attribute format is invalid.',
     'uuid' => 'The :attribute must be a valid UUID.',
+    'dni' => 'Error in :attribute ',
+    'iban' => 'Error in :attribute ',
+    'phone' => 'Error in :attribute ',
+    'login' => 'Credentials error de :attribute ',
 
     /*
     |--------------------------------------------------------------------------

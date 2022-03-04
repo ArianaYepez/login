@@ -117,6 +117,10 @@ return [
     'uploaded'             => 'El campo :attribute no se pudo subir.',
     'url'                  => 'El formato del campo :attribute es inválido.',
     'uuid'                 => 'El campo :attribute debe ser un UUID válido.',
+    'dni'                  => 'Error in :attribute ',
+    'iban'                 => 'Error in :attribute ',
+    'phone'                => 'Error in :attribute ',
+    'login'                => 'Error en las credenciales de :attribute ',
 
     /*
     |--------------------------------------------------------------------------
