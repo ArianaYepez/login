@@ -94,12 +94,21 @@ class RegisterController extends Controller
             'lastname'=>'required|min:2|max:40|alpha',
             // 8 numeros seguidos de una letra: 12345678A
             'dni'=>'required|min:2|max:20|alpha_num',
-            'email'=>'required|email|unique:App\User,email',
 
-            //contrasenia seguir politica de contrsenia fuerte
-            'password'=>'required|',
+            //usando eloquent evitas inyeccion sql
+            'email'=>'required|email|unique:App\User,email',
+            //el ejemplo del profesor estaba directamente con la tabla de la bd
+           // 'email'=>'required|email|unique:users',
+
+            //contrasenia seguir politica de contrsenia fuerte:
+            //no aceptar solo letras o numeros
+            //min 10 caracteres
+            //minimo una mayuscula
+            ////minimo un caracter especial *?etc...
+            'password'=>'required|alpha_num|min:10',
+
             //no permitir copy paste
-            'passwordconfirm'=>'required|',
+            'passwordconfirm'=>'required|alpha_num|min:10',
             
             //solo numeros y simbolo '+'
             'phone'=>'nullable|numeric|min:9|max:12',
@@ -113,6 +122,7 @@ class RegisterController extends Controller
         ]);
         $user= new User;
         $user->name= $name;
+        $user->lastname= $lastname;
         $user->save();
         return redirect()->route('home')->with('success', 'User created correctly');
 
