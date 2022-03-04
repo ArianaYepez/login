@@ -22,7 +22,7 @@
 
                     <form id="user_create_form" name="user_create_form" method="POST" 
                     enctype="multipart/form-data"
-                    action="{{ route('create') }}">
+                    action="{{ route('users.create') }}">
                         @csrf
                         {{ csrf_field() }}
 
