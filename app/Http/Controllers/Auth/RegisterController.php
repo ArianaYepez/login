@@ -58,7 +58,7 @@ class RegisterController extends Controller
 
             'name'=>'required|min:2|max:20|alpha',
             'lastname'=>'required|min:2|max:40|alpha',
-            'dni'=>'required|min:2|max:20|new dniRule()',
+            'dni'=>'required|min:2|max:20|new dniRule',
 
             //usando eloquent evitas inyeccion sql
             'email'=>'required|email|unique:App\User,email',
@@ -68,13 +68,13 @@ class RegisterController extends Controller
            
             //minimo una mayuscula
             ////minimo un caracter especial *?etc...
-            'password'=>'required|alpha_num|min:10|same:passwordconfirm|new AlphaNumericSymbol()',
+            'password'=>'required|alpha_num|min:10|same:passwordconfirm|new AlphaNumericSymbol',
 
           
-            'passwordconfirm'=>'required|alpha_num|min:10|new AlphaNumericSymbol()',
-            'phone'=>'nullable|numeric|min:9|max:12|new phoneRule()',
+            'passwordconfirm'=>'required|alpha_num|min:10|new AlphaNumericSymbol',
+            'phone'=>'nullable|numeric|min:9|max:12|new phoneRule',
             'country'=>'nullable',
-            'iban'=>'required|new ibanRule()',
+            'iban'=>'required|new ibanRule',
             'aboutme'=>'nullable|numeric|min:9|max:12',
         ]);
     }
