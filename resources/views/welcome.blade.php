@@ -82,6 +82,8 @@
             <div class="content">
                 <div class="title m-b-md">
                     Actividad 1 - Seguridad Web
+                    <br>
+                    Angelica Tomala - Ariana Yepez
                 </div>
 
                

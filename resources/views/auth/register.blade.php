@@ -84,10 +84,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                            <label for="passwordconfirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" >
+                                <input id="passwordconfirm" type="password" class="form-control" name="password_confirmation" >
                             </div>
                         </div>
 
@@ -110,12 +110,12 @@
                             <div class="col-md-6">
                             <select class="form-control" id="country">
                               <option selected >Choose...</option>
-                              <option value="1">Ecuador</option>
-                              <option value="2">Francia</option>
-                              <option value="3">Italia</option>
-                              <option value="1">Colombia</option>
-                              <option value="2">Argentina</option>
-                              <option value="3">Chile</option>
+                              <option value="Ecuador">Ecuador</option>
+                              <option value="Francia">Francia</option>
+                              <option value="Italia">Italia</option>
+                              <option value="Colombia">Colombia</option>
+                              <option value="Argentina">Argentina</option>
+                              <option value="Chile">Chile</option>
                             </select>
                             </div>
                         </div>
@@ -136,7 +136,7 @@
 
                         <div class="input-group">
                             <span class="input-group-text">{{ __('About me') }}</span>
-                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                            <textarea id="aboutme" name="aboutme" class="form-control" rows="4"></textarea>
                           </div>
 
                         <div class="form-group row mb-0">
