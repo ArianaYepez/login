@@ -86,8 +86,7 @@ class RegisterController extends Controller
            
             'name'=>'required|min:2|max:20|alpha',
             'lastname'=>'required|min:2|max:40|alpha',
-            // 8 numeros seguidos de una letra: 12345678A
-            'dni'=>'required|min:2|max:20|alpha_num',
+            'dni'=>'required|min:2|max:20|new dniRule()',
 
             //usando eloquent evitas inyeccion sql
             'email'=>'required|email|unique:App\User,email',
@@ -99,20 +98,16 @@ class RegisterController extends Controller
             //min 10 caracteres
             //minimo una mayuscula
             ////minimo un caracter especial *?etc...
-            'password'=>'required|alpha_num|min:10',
+            'password'=>'required|alpha_num|min:10|same:passwordconfirm|new AlphaNumericSymbol()',
 
             //no permitir copy paste
             'passwordconfirm'=>'required|alpha_num|min:10',
             
             //solo numeros y simbolo '+'
-            'phone'=>'nullable|numeric|min:9|max:12',
+            'phone'=>'nullable|numeric|min:9|max:12|new phoneRule()',
 
             'country'=>'nullable',
-
-            //2letras 'ES',2 numeros, 4numeros,4numeros, 2numeros,10numeros ej: ES91 2100 0418 45 0200051332
-            'iban'=>'required',
-
-            
+            'iban'=>'required|new ibanRule()',
             'aboutme'=>'nullable|numeric|min:9|max:12',
            
         ]);
