@@ -36,6 +36,6 @@ class AlphaNumericSymbol implements Rule
      */
     public function message()
     {
-        return 'Validation error on password.';
+        return trans( 'validation.password');
     }
 }

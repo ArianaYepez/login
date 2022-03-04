@@ -35,6 +35,6 @@ class phoneRule implements Rule
      */
     public function message()
     {
-        return 'Validation error on Phone.';
+        return trans('validation.phone');
     }
 }

@@ -35,6 +35,6 @@ class dniRule implements Rule
      */
     public function message()
     {
-        return 'Validation error on DNI.';
+        return trans('validation.dni');
     }
 }

@@ -35,6 +35,6 @@ class ibanRule implements Rule
      */
     public function message()
     {
-        return 'Validation error on IBAN.';
+        return trans('validation.iban');
     }
 }

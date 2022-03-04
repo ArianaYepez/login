@@ -36,6 +36,6 @@ class validacionlogin implements Rule
      */
     public function message()
     {
-        return 'Credenciales no validas.';
+        return trans('validation.login');
     }
 }
