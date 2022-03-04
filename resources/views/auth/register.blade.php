@@ -140,6 +140,7 @@
                             <span class="input-group-text">{{ __('About me') }}</span>
                             <textarea id="aboutme" name="aboutme" class="form-control" rows="4"></textarea>
                           </div>
+                          <br>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">

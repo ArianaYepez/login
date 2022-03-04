@@ -7,7 +7,7 @@ use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
+//use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
@@ -41,20 +41,14 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
+    /*protected function validator(array $data)
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
-    }
+    }*? 
 
     /**
      * Create a new user instance after a valid registration.
@@ -73,7 +67,7 @@ class RegisterController extends Controller
         ]);
     }*/
     public function createUser(){
-        return view('auth.register');
+        return view('user.createUser');
     }
 
     public function storeUser (Request $request){
@@ -113,18 +107,28 @@ class RegisterController extends Controller
             //solo numeros y simbolo '+'
             'phone'=>'nullable|numeric|min:9|max:12',
 
+            'country'=>'nullable',
+
             //2letras 'ES',2 numeros, 4numeros,4numeros, 2numeros,10numeros ej: ES91 2100 0418 45 0200051332
             'iban'=>'required',
 
-            'country'=>'nullable',
+            
             'aboutme'=>'nullable|numeric|min:9|max:12',
            
         ]);
         $user= new User;
         $user->name= $name;
         $user->lastname= $lastname;
+        $user->dni= $dni;
+        $user->email= $email;
+        $user->password= $password;
+        $user->phone= $phone;
+        $user->country= $country;
+        $user->iban= $iban;
+        $user->aboutme= $aboutme;
+
         $user->save();
-        return redirect()->route('home')->with('success', 'User created correctly');
+        return redirect()->route('auth.register')->with('success', 'User created correctly');
 
     }
 }
