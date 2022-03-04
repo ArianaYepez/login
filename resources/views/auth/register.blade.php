@@ -22,9 +22,9 @@
 
                     <form id="user_create_form" name="user_create_form" method="POST" 
                     enctype="multipart/form-data"
-                    action="{{ route('users.create') }}">
+                    action="{{route('users.create')}}">
                         @csrf
-                        {{ csrf_field() }}
+                        
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
