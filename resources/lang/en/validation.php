@@ -121,6 +121,10 @@ return [
     'iban' => 'Error in :attribute ',
     'phone' => 'Error in :attribute ',
     'login' => 'Credentials error de :attribute ',
+    'dniRule'              => 'The :attribute s not in the correct format. Must have 8 digits followed by an uppercase letter.',
+    'AlphaNumericSymbol'   => 'The password entered is weak please enter a strong password. ',
+    'phoneRule'            => 'The :attribute entered does not have the correct format. It must have at least 9 and at most 12 digits.You can place the country prefix with the symbol +'.,
+    'ibanRule'             => 'The :attribute entered is not in the correct format.Must have 2 letters followed by 22 numbers.',
 
     /*
     |--------------------------------------------------------------------------

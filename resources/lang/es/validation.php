@@ -117,10 +117,14 @@ return [
     'uploaded'             => 'El campo :attribute no se pudo subir.',
     'url'                  => 'El formato del campo :attribute es inválido.',
     'uuid'                 => 'El campo :attribute debe ser un UUID válido.',
-    'dni'                  => 'Error in :attribute ',
-    'iban'                 => 'Error in :attribute ',
-    'phone'                => 'Error in :attribute ',
-    'login'                => 'Error en las credenciales de :attribute ',
+    'dni'                  => 'Error in :attribute.',
+    'iban'                 => 'Error in :attribute.',
+    'phone'                => 'Error in :attribute. ',
+    'login'                => 'Error en las credenciales de :attribute. ',
+    'dniRule'              => 'El :attribute no tiene el formato correcto. Debe tener 8 dígitos seguido de una letra en mayuscula',
+    'AlphaNumericSymbol'   => 'La contraseña ingresada es debil por favor ingrese una contraseña fuerte. ',
+    'phoneRule'            => 'El :attribute ingresado no tiene el formato correcto.Debe tener como mínimo 9 y como máximo 12 dígitos.Se puede colocar el prefijo del País con el simbolo +.',
+    'ibanRule'             => 'El :attribute ingresado no tiene el formato correcto. Debe tener 2 letras seguido de 22 números.',
 
     /*
     |--------------------------------------------------------------------------
