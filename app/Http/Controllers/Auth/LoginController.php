@@ -37,4 +37,23 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    public function storeUser (Request $request){
+      
+        $email =$request->get('email');
+        $password =$request->get('password');
+       
+        $request->validate([
+           
+            'email'=>'required|email|unique:App\User,email',
+            'password'=>'required|alpha_num|min:10|new validacionlogin()',
+
+           
+        ]);
+       
+
+        $user->save();
+        return redirect()->route('auth.register')->with('success', 'User log in  correctly');
+
+    }
 }
