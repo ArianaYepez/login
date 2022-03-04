@@ -8,14 +8,16 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form id="user_create_form" name="user_create_form" method="POST" 
+                    enctype="multipart/form-data"
+                    action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" >
+                                <input id="name"  type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" >
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +31,7 @@
                             <label for="lastname" class="col-md-4 col-form-label text-md-right">{{ __('Last Names') }}</label>
 
                             <div class="col-md-6">
-                                <input id="lastname" type="text" class="form-control @error('lalstname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" >
+                                <input id="lastname"  type="text" class="form-control @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" >
 
                                 @error('lastname')
                                     <span class="invalid-feedback" role="alert">
