@@ -81,9 +81,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Actividad 1 - Seguridad Web
-                    <br>
-                    Angelica Tomala - Ariana Yepez
+                    <h4>Actividad 1 - Seguridad Web</h4>
+                   
+                   <h5> Angelica Tomala - Ariana Yepez </h4>
                 </div>
 
                
