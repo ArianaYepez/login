@@ -93,9 +93,7 @@ class RegisterController extends Controller
             //el ejemplo del profesor estaba directamente con la tabla de la bd
            // 'email'=>'required|email|unique:users',
 
-            //contrasenia seguir politica de contrsenia fuerte:
-            //no aceptar solo letras o numeros
-            //min 10 caracteres
+           
             //minimo una mayuscula
             ////minimo un caracter especial *?etc...
             'password'=>'required|alpha_num|min:10|same:passwordconfirm|new AlphaNumericSymbol()',
@@ -103,7 +101,7 @@ class RegisterController extends Controller
             //no permitir copy paste
             'passwordconfirm'=>'required|alpha_num|min:10',
             
-            //solo numeros y simbolo '+'
+          
             'phone'=>'nullable|numeric|min:9|max:12|new phoneRule()',
 
             'country'=>'nullable',
